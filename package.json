@@ -1,9 +1,14 @@
 {
-  "name": "log",
-  "description": "Tiny logger with streaming reader and db writing capabilities",
-  "version": "2.0.0",
-  "author": "Marius Constantin <marius.constantin@makerstudios.com>",
-  "keywords": ["log", "logger"],
-  "main": "./lib/log.js",
-  "engines": { "node": ">= 0.2.0" }
+    "name": "log",
+    "description": "Tiny logger with streaming reader and db writing capabilities",
+    "version": "2.0.0",
+    "author": "Marius Constantin <marius.constantin@makerstudios.com>",
+    "keywords": ["log", "logger", "database logger", "logger db", "logger database", "db logger"],
+    "main": "./lib/log.js",
+    "engines": {
+        "node": ">= 0.2.0"
+    },
+	"devDependencies": {
+		"mysql": ">=0.9.2"
+	}
 }
