@@ -6,7 +6,7 @@
 
 ## Installation
 
-    $ npm install log
+    $ npm install git+https://github.com/arius25/log.js.git
 
 ## Example
 
