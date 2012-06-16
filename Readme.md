@@ -27,6 +27,14 @@ Specifying a specific stream:
 
 Specifying a database connection:
 
+	create table <application>_log (
+      id   int NOT NULL AUTO_INCREMENT,
+      date_created    datetime NOT NULL,
+      application     varchar(64) NOT NULL,
+      message         varchar(8192) NOT NULL, -- this should allow for very descriptive logs
+      PRIMARY KEY(id)
+	)
+
 	var connection = mysql.createClient({
       host: <host>,
       port: <port>,
