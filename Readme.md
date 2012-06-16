@@ -13,7 +13,7 @@
 Log level defaults to __DEBUG__ however here we specify __info__, and the stream defaults to _stdout_:
 
     var Log = require('log')
-      , log = new Log('info');
+      , log = new Log('test_app', 'info');
 
     log.debug('preparing email');
     log.info('sending email');
@@ -23,12 +23,26 @@ Specifying a specific stream:
 
     var fs = require('fs')
       , Log = require('log')
-      , log = new Log('debug', fs.createWriteStream('my.log'));
+      , log = new Log('test_app', 'debug', fs.createWriteStream('my.log'));
+
+Specifying a database connection:
+
+	var connection = mysql.createClient({
+      host: <host>,
+      port: <port>,
+      database: <schema>,
+      user: <user>,
+      password: <password>
+	});
+
+    var fs = require('fs')
+      , Log = require('log')
+      , log = new Log('test_app', 'debug', null, connection);
 
 Instead of the log level constants, you may also supply a string:
 
     var Log = require('log')
-      , log = new Log('warning');
+      , log = new Log('test_app', 'warning');
 
  We can also use `%s` much like `console.log()` to pass arguments:
  
@@ -41,7 +55,7 @@ Instead of the log level constants, you may also supply a string:
     var Log = require('log')
       , fs = require('fs')
       , stream = fs.createReadStream(__dirname + '/file.log')
-      , log = new Log('debug', stream);
+      , log = new Log('test_app', 'debug', stream);
    
     log.on('line', function(line){
       console.log(line);
