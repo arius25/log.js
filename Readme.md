@@ -31,6 +31,7 @@ Specifying a database connection:
       id   int NOT NULL AUTO_INCREMENT,
       date_created    datetime NOT NULL,
       application     varchar(64) NOT NULL,
+      level           varchar(16) NOT NULL,
       message         varchar(8192) NOT NULL, -- this should allow for very descriptive logs
       PRIMARY KEY(id)
 	)
