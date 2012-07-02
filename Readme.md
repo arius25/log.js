@@ -27,8 +27,8 @@ Specifying a specific stream:
 
 Specifying a database connection:
 
-	create table <application>_log (
-      id   int NOT NULL AUTO_INCREMENT,
+	create table dashboard_log (
+      id              int NOT NULL AUTO_INCREMENT,
       date_created    datetime NOT NULL,
       application     varchar(64) NOT NULL,
       level           varchar(16) NOT NULL,

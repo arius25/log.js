@@ -9,6 +9,6 @@
         "node": ">= 0.2.0"
     },
 	"devDependencies": {
-		"mysql": ">=0.9.2"
+		"mysql-pool": ">=0.2.2"
 	}
 }
